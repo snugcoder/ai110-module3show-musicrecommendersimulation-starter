@@ -17,10 +17,12 @@ def main() -> None:
     # Starter example profile
     user_prefs = {"genre": "pop", "mood": "happy", "energy": 0.8}
     
-    annie = UserProfile(favorite_genre="lofi", favorite_mood="chill", target_energy=0.5, likes_acoustic=True, target_tempo=70.0, target_valence=0.61, target_danceability=0.59)
+    user_prefs2 = {"genre": "lofi", "mood": "chill", "energy": 0.5, "likes_acoustic": True, "target_tempo": 70.0, "target_valence": 0.61, "target_danceability": 0.59}
+    
+    # annie = UserProfile(favorite_genre="lofi", favorite_mood="chill", target_energy=0.5, likes_acoustic=True, target_tempo=70.0, target_valence=0.61, target_danceability=0.59)
     
 
-    recommendations = recommend_songs(user_prefs, songs, k=5)
+    recommendations = recommend_songs(user_prefs2, songs, k=5)
 
     width = 54
     print()
