@@ -140,6 +140,18 @@ Describe your scoring logic in plain language.
 
 Try to avoid code in this section, treat it like an explanation to a non programmer.
 
+Algorithmic Recipe
+
+Each song will have a genre, mood, energy, valance, etc. Using these and the user profile, I will score how relevant a song is to a specified user. The User Profile has specific metrics such as target_tempo, target_valence, target_danceability, target_energy, and mood help to gain a full picture of what genres the user will like. However, this doesn't take into account the flexibility of a users listening recommendations over time. To score each individual song, the algorithm uses a manual/intuition based logic assigning weights to each feature of a song and using that to calculate a score. An example of the weights may be: # "Users think in terms of mood and genre first"
+weights = {"genre": 0.35, "mood": 0.30, "energy": 0.20, "valence": 0.10, "acousticness": 0.05}. The scoring logic must return a numeric score and a list of reasons
+
+
+Terminal Screenshot
+![alt text](image.png)
+---
+Visualizing the Design
+
+Input (User Preferences) -> Process (Judging through songs.csv for rankings) -> Output (Top K Recommendations) -> Finetuning if needed
 ---
 
 ## 4. Data
